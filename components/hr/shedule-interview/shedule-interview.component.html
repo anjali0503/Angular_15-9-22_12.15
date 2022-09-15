@@ -1,0 +1,20 @@
+<h2>Assign Interviewer</h2>
+<br>
+<div [hidden]="submitted">
+  <form>
+
+    <label>Assign Interviewer </label>
+    <select name="employeeDetails" [(ngModel)] = "employeeDetails">
+      <option *ngFor="let employee of employeeDetailsArray" [ngValue] = "employee">{{employee.employeeId}}</option>
+    </select>
+    <hr>
+    <tr>
+      <th>Employee ID</th>
+    </tr>
+    <button (click)="setInterviewer()">Add Interview</button>
+  </form>
+</div>
+<div [hidden]="!submitted">
+  <h4>Candidate Added Successfully!!</h4>
+  <button (click)="backtohome()">Go Back to Home</button>
+</div>

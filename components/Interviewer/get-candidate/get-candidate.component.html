@@ -1,0 +1,36 @@
+<!-- <app-tl-menu></app-tl-menu> -->
+<h2>Candidate Details </h2>
+<br>
+<table id="address">
+    <tr>
+        <th>Interview Id </th>
+        <th>Applicant Id</th>
+      
+        <th>Status</th>
+        
+        <th>Round 1</th>
+        <th>Round 2</th>
+        <th>Round 3</th>
+        <th>Action</th>
+    </tr>
+
+    
+    <tr *ngFor="let interviewer of applicantList"> 
+  
+        <td>{{interviewer.interviewId}}</td>
+        <td>{{interviewer.applicantDetails.applicantId}}</td>
+        <td>{{interviewer.status}}</td>
+       
+        <td>{{interviewer.round1}}</td>
+        <td>{{interviewer.round2}}</td>
+        <td>{{interviewer.round3}}</td>
+        
+          
+        <td> 
+            <button (click)="updateResult(interviewer.interviewId)">Update Results</button> </td>
+         
+
+    </tr>
+
+
+</table>

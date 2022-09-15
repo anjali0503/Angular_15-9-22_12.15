@@ -1,0 +1,66 @@
+<h2>Update Candidate Result</h2>
+<br>
+<div [hidden]="submitted">
+    <form (submit)="updateResult()">
+      <label>Round 1</label>
+      <!-- <input type="text" name="round1" [(ngModel)]="Interviewer.round1"> -->
+        <select name="round1" [(ngModel)]="Interviewer.round1">
+            <option>Choose One</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+        </select>
+      <label>Round 2</label>
+      <!-- <input type="text" name="round2" [(ngModel)]="Interviewer.round2"> -->
+      <select name="round2" [(ngModel)]="Interviewer.round2">
+        <option>Choose One</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+    </select>
+  
+      <label>Round 3</label>
+      <!-- <input type="text" name="round3" [(ngModel)]="Interviewer.round3"> -->
+      <select name="round3" [(ngModel)]="Interviewer.round3">
+        <option>Choose One</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+    </select>
+
+      <label>Status</label>
+      <!-- <input type="text" name="status" [(ngModel)]="Interviewer.status"> -->
+      <select name="status" [(ngModel)]="Interviewer.status">
+        <option>Update status</option>
+        <option>Pass</option>
+        <option>Fail</option>
+      </select>
+
+      <input type="submit" value="Update Result">
+    </form>
+  </div>
+  <div [hidden]="!submitted">
+    <h4> Result Updated Successfully!!!</h4>
+    <button (click)="backtohome()">Go Back to Home</button>
+  </div>

@@ -1,0 +1,21 @@
+<header class="main-header">
+    <div>
+      <a href="index.html" class="main-header__brand">Welcome HR</a>
+    </div>
+    <nav class="main-nav">
+      <ul class="main-nav__items">
+        <!-- <li class="main-nav__item">
+          <a routerLink="addnewjobdesciption">New Job Request</a>
+        </li> -->
+        <li class="main-nav__item main-nav__item__cta">
+          <a routerLink="/publishedJd">Published Jobs</a>&nbsp;
+          <a routerLink="/selectedCandidates">Selected Candidates</a>&nbsp;
+          <a routerLink="/loginpage">LogOut</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <router-outlet></router-outlet>
+  <app-get-approved-jobs></app-get-approved-jobs>
+
+  

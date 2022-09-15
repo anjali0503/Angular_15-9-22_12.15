@@ -1,0 +1,12 @@
+<app-menu></app-menu>
+<h1>Welcome User!!</h1>
+<form (submit)="getLoginDetails()">  
+    <div class="container">   
+        <label>Username : </label>   
+        <input type="text" placeholder="Enter Username" name="userId" [(ngModel)]="login.userId "> <br><br> 
+        <label>Password : </label>   
+        <input type="password" placeholder="Enter Password" name="password" [(ngModel)]="login.password">  <br><br> 
+        <button >Login</button>   
+        
+    </div>   
+</form>    

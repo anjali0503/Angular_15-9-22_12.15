@@ -1,0 +1,38 @@
+
+<h2>Application Form</h2>
+<br>
+<div [hidden]="submitted">
+    <form (submit)="apply()">
+      <label>Applicant Name :</label>
+      <input type="text" name="applicantName" [(ngModel)]="applicantDetails.applicantName">
+
+      <label>Qualification :</label>
+      <input type="text" name="qualification" [(ngModel)]="applicantDetails.qualification">
+  
+      <label>Skill 1:</label>
+      <input type="text" name="skill1" [(ngModel)]="applicantDetails.skill1">
+
+      <label>Skill 2 :</label>
+      <input type="text" name="skill2" [(ngModel)]="applicantDetails.skill2">
+
+      <label>Skill 3 :</label>
+      <input type="text" name="skill3" [(ngModel)]="applicantDetails.skill3">
+
+      <label>Contact Details:</label>
+      <input type="text" name="contact" [(ngModel)]="applicantDetails.contact">
+
+      <label>Document Id: </label>
+      <input type="text" name="documentDetails.documentId" [(ngModel)]="applicantDetails.documentDetails.documentId">
+
+       <label>Job Id:</label>
+      <input type="text" name="jobDescription.jobId" [(ngModel)]="applicantDetails.jobDescriptionDetails.jobId"> 
+
+      
+
+      <input type="submit" value="Apply">
+    </form>
+  </div>
+  <div [hidden]="!submitted">
+    <h4> form Submitted Successfully!!!</h4>
+    <button (click)="backtohome()">Go Back to Home</button>
+  </div>

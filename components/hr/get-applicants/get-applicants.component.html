@@ -1,0 +1,42 @@
+
+<!-- <app-tl-menu></app-tl-menu> -->
+<h2>APPLICANT DETAILS</h2>
+<br>
+<table id="address">
+    <tr>
+        <th>APPLICANT ID</th>
+        <th>APPLICANT NAME </th>
+        <th>QUALIFICATION</th>
+        <th>SKILL 1</th>
+        <th>SKILL 2</th>
+        <th>SKILL 3</th>
+        <th>CONTACT</th>
+        <th>DOCUMENT ID</th>
+        <th>JOB ID</th>
+        <th>Applicant Status</th>
+        <th>Action</th>
+    </tr>
+  
+    <tr *ngFor="let applicant of applicantDetailsArray"> 
+       
+        <td>{{applicant.applicantId}}</td>
+        <td>{{applicant.applicantName}}</td>
+        <td>{{applicant.qualification}}</td>
+        <td>{{applicant.skill1}}</td>
+        <td>{{applicant.skill2}}</td>
+        <td>{{applicant.skill3}}</td>
+        <td>{{applicant.contact}}</td>
+        <td>{{applicant.documentDetails.documentId}}</td>
+        
+        <td>{{applicant.jobDescriptionDetails.jobId}}</td>
+        <td>{{applicant.status}}</td>
+
+        <td><button (click)="getInterviewerId(applicant.applicantId)">SEND FOR INTERVIEW</button></td>
+        
+    </tr>
+
+
+    <!-- getApplicant -->
+
+</table>
+<!-- assignInterviewer -->

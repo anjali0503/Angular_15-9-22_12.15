@@ -1,0 +1,33 @@
+
+<!-- <app-tl-menu></app-tl-menu> -->
+<h2>All Job Description</h2>
+<br>
+<table id="address">
+    <tr>
+        <th>Job Id</th>
+        <th>Employee Id</th>
+        <th>skill 1</th>
+        <th>skill 2</th>
+        <th>skill 3</th>
+        <th>Project Id </th>
+        <th>Job Status</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor="let job of allJobDescriptionPM">
+       
+        <td>{{job.jobId}}</td>
+        <td>{{job.employeeDetails.employeeId}}</td>
+        <td>{{job.skill1}}</td>
+        <td>{{job.skill2}}</td>
+        <td>{{job.skill3}}</td>
+        <td>{{job.projectDetails.projectId}}</td>
+        <td>{{job.jobStatus}}</td>
+        <td><button (click)="approved(job)" >Approve</button> 
+            <button (click)="reject(job)" >Reject</button> 
+            <button (click)="checkemployee(job.jobId)">checkEmployee</button> 
+         
+       
+    </tr>
+
+
+</table>

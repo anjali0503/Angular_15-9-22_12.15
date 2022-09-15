@@ -1,0 +1,41 @@
+
+<!-- <app-tl-menu></app-tl-menu> -->
+<h2>Employee Details </h2>
+<br>
+<table id="address">
+    <tr>
+        <th>Employee Id</th>
+        <th>Employee name</th>
+        <th> Salary</th>
+      <th>Project Id </th>
+        <th>Designation</th>
+        
+        <th>MGR</th>
+        <th>Skill1</th>
+        <th>Skill2</th>
+        <th>Skill3</th>
+        <th>Status</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor="let employee of employeeDetailsArray"> 
+  
+        <td>{{employee.employeeId}}</td>
+        <td>{{employee.ename}}</td>
+        <td>{{employee.salary}}</td>
+       
+        <td>{{employee.projectDetails.projectId}}</td>
+        <td>{{employee.designation}}</td>
+        <td>{{employee.mgr}}</td>
+        <td>{{employee.skill1}}</td>
+        <td>{{employee.skill2}}</td>
+        <td>{{employee.skill3}}</td>
+        <td>{{employee.status}}</td>
+        
+        <td><button (click)="assignProject(employee)">Assign</button></td> 
+            <!-- <button routerLink="checkemployee(jobDescription.jobId)">checkEmployee</button> 
+          -->
+       
+    </tr>
+
+
+</table>
